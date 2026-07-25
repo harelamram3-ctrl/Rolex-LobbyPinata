@@ -1,6 +1,11 @@
 package com.example.lobbypinata;
 
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.Particle;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,7 +26,7 @@ public class LobbyPinataPlugin extends JavaPlugin implements CommandExecutor, Li
 
     private Llama pinataEntity;
     private ArmorStand nameTag;
-    private int maxHits = 50;
+    private final int maxHits = 50;
     private int currentHits = 50;
     private boolean isSpawned = false;
 
@@ -31,7 +36,7 @@ public class LobbyPinataPlugin extends JavaPlugin implements CommandExecutor, Li
             getCommand("pinata").setExecutor(this);
         }
         getServer().getPluginManager().registerEvents(this, this);
-        
+
         getLogger().info("========================================");
         getLogger().info("LobbyPinata Plugin Enabled!");
         getLogger().info("Created by: BadPanda14");
