@@ -1,0 +1,10 @@
+name: LobbyPinata
+version: 1.0
+main: com.example.lobbypinata.LobbyPinataPlugin
+author: BadPanda14
+description: Lobby Pinata Plugin created by BadPanda14
+api-version: 1.20
+commands:
+  pinata:
+    description: Spawn or remove the lobby pinata
+    permission: pinata.admin
